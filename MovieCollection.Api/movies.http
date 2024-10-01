@@ -1,0 +1,31 @@
+GET http://localhost:5174/movies
+
+###
+GET http://localhost:5174/movies/2
+
+###
+POST http://localhost:5174/movies
+Content-Type: application/json
+
+{
+    "title": "Blue Velvet",
+    "directors": [{"id": null, "name": "David Lynch"}],
+    "actors": [{"id": null, "name": "Kyle Maclaclan"}],
+    "genres": [7, 18, 24, 9],
+    "releaseDate": "1986-09-12"
+}
+
+###
+PUT http://localhost:5174/movies/2
+Content-Type: application/json
+
+{
+    "title": "The Lighthouse",
+    "directors": [{"id": null, "name": "Robert Eggers"}],
+    "actors": [{"id": null, "name": "Willem Dafoe"}, {"id": null, "name": "Robert Pattinson"}],
+    "genres": [9, 11, 14, 18, 24],
+    "releaseDate": "2019-10-18"
+}
+
+###
+DELETE http://localhost:5174/movies/3
